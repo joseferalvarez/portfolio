@@ -1,6 +1,6 @@
 'use client'
 
-export default function page() {
+export default function page({ params }: { params: any }) {
     return (
         <>
             <div>projects</div>

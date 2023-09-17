@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $light_blue;
+    align-items: center;
+
+    & div a {
+        color: $regular_grey;
+        text-decoration: none;
+    }
+
+    & div:not(&__tabs) {
+        padding: 15px 20px;
+        border-bottom: 3px solid transparent;
+        transition: border-bottom .2s;
+    }
+
+    & div:not(&__tabs):hover {
+        border-bottom: 3px solid #D19A66;
+    }
+
+    & div:not(&__tabs div):nth-child(1) a {
+        padding-right: 40px;
+    }
+
+    & div:not(&__tabs div):nth-child(3) {
+        border-left: 1px solid $light_blue;
+    }
+
+    &__tabs {
+        display: flex;
+        flex-grow: 1;
+
+        & div {
+            border-right: 1px solid $light_blue;
+        }
+
+        & div:nth-child(1) {
+            border-left: 1px solid $light_blue;
+        }
+    }
+
+}

@@ -1,6 +1,8 @@
-import Link from 'next/link';
-import styles from '@st/global.module.scss';
+import '@st/globals.scss';
+import '@st/defaults.scss';
 import { JetBrains_Mono } from 'next/font/google';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Next.js',
@@ -20,10 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${styles.body} ${jetbrains.className}`}>
-        <Link className='text' href='/about'>about</Link>
-        <Link className='text' href='/projects'>projects</Link>
-        {children}
+      <body className={`${jetbrains.className}`}>
+        <div className='screen'>
+          <Navbar />
+          <div className='screen__current'>
+            {children}
+          </div>
+          <Footer />
+        </div>
       </body>
     </html>
   )

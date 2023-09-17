@@ -1,0 +1,38 @@
+@import './variables.scss';
+
+body {
+    background-color: $dark_blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+h1 {
+    font-size: $title_size;
+    color: $regular_white;
+}
+
+h2 {
+    font-size: $subtitle_size;
+    color: $mint_blue;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    background-color: $regular_blue;
+    width: 95%;
+    height: 90%;
+    border-radius: 8px;
+    border: 1px solid $light_blue;
+    box-shadow: 0px 4px 4px 0px #00000025;
+
+    &__current {
+        flex-grow: 1;
+    }
+}
+
+.text {
+    color: red;
+}
