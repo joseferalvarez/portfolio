@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import '../styles/global.module.scss'
+import Link from 'next/link';
+import styles from '@st/global.module.scss';
 import { JetBrains_Mono } from 'next/font/google';
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`body ${jetbrains.className}`}>
+      <body className={`${styles.body} ${jetbrains.className}`}>
         <Link className='text' href='/about'>about</Link>
         <Link className='text' href='/projects'>projects</Link>
         {children}
