@@ -9,14 +9,14 @@ export default function Navbar() {
             </div>
             <div className={styles.navbar__tabs}>
                 <div>
-                    <Link href={'/about'}>about-me</Link>
+                    <Link href={'/about'}>sobre-mi</Link>
                 </div>
                 <div>
-                    <Link href={'/projects'}>projects</Link>
+                    <Link href={'/projects'}>proyectos</Link>
                 </div>
             </div>
             <div>
-                <Link href={'/contact'}>.contact-me</Link>
+                <Link href={'/contact'}>.contacto</Link>
             </div>
         </div>
     )

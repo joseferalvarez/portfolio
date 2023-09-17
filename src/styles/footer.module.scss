@@ -1,18 +1,24 @@
 @import './variables.scss';
 
-.navbar {
+.footer {
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid $light_blue;
+    border-top: 1px solid $light_blue;
     align-items: center;
 
-    & div a {
+    & div a,
+    & div p {
         color: $regular_grey;
         text-decoration: none;
+        display: flex;
     }
 
+    &__text,
     & div:not(&__tabs) {
         padding: 10px 20px;
+    }
+
+    & div:not(&__tabs):not(&__text) {
         border-bottom: 3px solid transparent;
         transition: border-bottom .2s;
 
@@ -22,12 +28,16 @@
     }
 
     & div:not(&__tabs div) {
-        &:nth-child(3) {
-            border-left: 1px solid $light_blue;
-        }
-
         &:nth-child(1) a {
             padding-right: 40px;
+        }
+
+        &:nth-child(3) {
+            border-left: 1px solid $light_blue;
+
+            & a {
+                gap: 20px;
+            }
         }
     }
 
