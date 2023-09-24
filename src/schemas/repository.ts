@@ -1,10 +1,10 @@
 type IRepository = {
     name: string;
     repoLink: string;
-    languages: string[];
-    dateCreated: Date;
-    dateUpdated: Date;
-    topics: string[];
+    languages?: string[];
+    dateCreated: string;
+    dateUpdated: string;
+    topics?: string[];
     description?: string;
 }
 
