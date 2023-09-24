@@ -9,15 +9,17 @@ export default function Page() {
     const user: IUser = useUserStore();
 
     useEffect(() => {
-        user.setUser();
-        user.setRepos();
+        if (!user.name) {
+            user.setUser();
+        }
+        if (!user.publicRepos || user.publicRepos.length <= 0) {
+            user.setRepos();
+        }
     }, []);
 
     useEffect(() => {
         console.log(user);
-    }, [user])
-
-
+    }, [user]);
 
     return (
         <div>

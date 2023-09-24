@@ -45,7 +45,8 @@ const useUserStore = create<IUser>()((set) => ({
                 name: user.name,
                 position: user.bio,
                 location: user.location,
-                company: user.company
+                company: user.company,
+                email: user.email
             }));
         }
     },
