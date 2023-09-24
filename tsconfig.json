@@ -8,7 +8,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -28,6 +28,12 @@
       ],
       "@st/*": [
         "./src/styles/*"
+      ],
+      "@sc/*": [
+        "./src/schemas/*"
+      ],
+      "@cp/*": [
+        "./src/components"
       ]
     }
   },
