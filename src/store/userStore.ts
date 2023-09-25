@@ -31,6 +31,8 @@ const useUserStore = create<IUser>()((set) => ({
     location: '',
     socialMedia: [],
     company: '',
+    accountName: '',
+    accountLink: '',
     publicReposNumber: 0,
     email: '',
     orgs: [],
@@ -46,7 +48,9 @@ const useUserStore = create<IUser>()((set) => ({
                 position: user.bio,
                 location: user.location,
                 company: user.company,
-                email: user.email
+                email: user.email,
+                accountName: user.login,
+                accountLink: user.html_url,
             }));
         }
     },

@@ -8,6 +8,8 @@ type IUser = {
     location: string;
     socialMedia: ISocialMedia[];
     company: string;
+    accountName: string;
+    accountLink: string;
     publicReposNumber?: number;
     email?: string;
     orgs?: IOrgs[];
